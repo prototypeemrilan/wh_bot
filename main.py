@@ -11,7 +11,8 @@ dp = Dispatcher(bot)
 
 @dp.message_handler(commands=['start'])
 async def start_command(message: types.Message):
-    await message.answer(text=f'Ну здрасивуй человечина я рад тебя видеть {message.from_user.first_name},хоть кто-то ко мне пришел за эти 100 лет')
+    await message.answer(text=f'''Ну здрасивуй человечина я рад тебя видеть {message.from_user.first_name},
+хоть кто-то ко мне пришел за эти 100 лет''')
     await message.delete()
 
 @dp.message_handler(commands=['help'])
